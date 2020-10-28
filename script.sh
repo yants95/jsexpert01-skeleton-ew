@@ -1,7 +1,7 @@
 ASSETSFOLDER=assets/timeline
 
 for mediaFile in `ls $ASSETSFOLDER | grep .mp4`; do
-    # cortar a extensao e a resolucao do arquivi
+    # cortar a extensao e a resolucao do arquivo
     FILENAME=$(echo $mediaFile | sed -n 's/.mp4//p' | sed -n 's/-1920x1080//p')
     INPUT=$ASSETSFOLDER/$mediaFile
     FOLDER_TARGET=$ASSETSFOLDER/$FILENAME
